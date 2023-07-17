@@ -1,9 +1,9 @@
-const React = require('react');
-const { useRef } = require('react');
-const { Link } = require('react-router-dom');
-const { useDispatch } = require('react-redux');
-const { setUserId } = require('../redux/result_reducer');
-require('../styles/Main.css');
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUserId } from '../redux/result_reducer';
+import '../styles/Main.css';
+
 
 function Main() {
   const inputRef = useRef(null);

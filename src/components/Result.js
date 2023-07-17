@@ -1,13 +1,13 @@
-const React = require('react');
-const { useEffect } = require('react');
-const ResultTable = require('./ResultTable');
-const { Link } = require('react-router-dom');
-const { useSelector, useDispatch } = require('react-redux');
-const { attempts_Number, earnPoints_Number, flagResult } = require('../helper/helper');
-const { resetAllAction } = require('../redux/question_reducer');
-const { resetResultAction } = require('../redux/result_reducer');
-const { usePublishResult } = require('../hooks/setResult');
-require('../styles/Result.css');
+import React, { useEffect } from 'react';
+import ResultTable from './ResultTable';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { attempts_Number, earnPoints_Number, flagResult } from '../helper/helper';
+import { resetAllAction } from '../redux/question_reducer';
+import { resetResultAction } from '../redux/result_reducer';
+import { usePublishResult } from '../hooks/setResult';
+import '../styles/Result.css';
+
 
 function Result() {
   const dispatch = useDispatch();

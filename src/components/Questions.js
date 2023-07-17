@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
-
 /** Custom Hook */
 import { useFetchQestion } from '../hooks/FetchQuestion'
 import { updateResult } from '../hooks/setResult'
@@ -15,7 +13,7 @@ export default function Questions({ onChecked }) {
     const [{ isLoading, apiData, serverError}] = useFetchQestion() 
     const questions = useSelector(state => state.questions.queue[state.questions.trace]);
     const dispatch = useDispatch()
-    console.log(questions)
+    // console.log(questions)
 
     useEffect(() => {
         dispatch(updateResult({ trace, checked}))
